@@ -2,9 +2,11 @@
 /* --- Exercice 1 --- */
 const btn1 = document.querySelector('#ex1 .js-btn');
 const txt1 = document.getElementById('txt1');
-btn1.addEventListener('click', function(e) {
-    txt1.classList.toggle('hidden');
-});
+const txt2 = document.getElementById('txt2');
+
+// btn1.addEventListener('click', function(e) {
+//     txt1.classList.toggle('hidden');
+// });
 
 // function toggleText() {
 //     txt1.classList.toggle('hidden');
@@ -19,24 +21,24 @@ btn1.addEventListener('click', function(e) {
 //     });
 // }
 
-// document.querySelectorAll('button[data-text-toggle-id]').forEach(btn => {
-//     btn.addEventListener('click', function(e) {
-//         document.getElementById(this.dataset.textToggleId).classList.toggle('hidden');
-//     }); 
-// });
+document.querySelectorAll('button[data-text-toggle-id]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        document.getElementById(this.dataset.textToggleId).classList.toggle('hidden');
+    }); 
+});
 
 
 /* ------------------------------------ */
 /* --- Exercice 2 --- */
 
-function displayScroll() {
-    document.getElementById('ex2-scroll-value').textContent = window.scrollY;
-}
-window.addEventListener('scroll', displayScroll);
-
-// window.addEventListener('scroll', function() {
+// function displayScroll() {
 //     document.getElementById('ex2-scroll-value').textContent = window.scrollY;
-// });
+// }
+// window.addEventListener('scroll', displayScroll);
+
+window.addEventListener('scroll', function() {
+    document.getElementById('ex2-scroll-value').textContent = window.scrollY;
+});
 
 
 /* ------------------------------------ */
@@ -52,29 +54,29 @@ btn3.addEventListener('click', function(e) {
 /* ------------------------------------ */
 /* --- Exercice 4 --- */
 
-const btn4 = document.querySelector('#ex4 .js-btn');
-let colors = ['blue', 'red', 'green', 'pink'];
-let count = 0;
-const primaryClass = btn4.className;
-btn4.addEventListener('click', function(e) {
-    this.className = primaryClass + " " + colors[count % colors.length];
-    count++;
-});
-
-// document.querySelector('#ex4 .js-btn').addEventListener('click', function(e) {
-//     if (this.classList.contains('blue')) {
-//         this.classList.remove('blue');
-//         this.classList.add('red');
-//     }
-//     else if (this.classList.contains('red')) {
-//         this.classList.remove('red');
-//         this.classList.add('green');
-//     }
-//     else {
-//         this.classList.remove('green');
-//         this.classList.add('blue');
-//     }
+// const btn4 = document.querySelector('#ex4 .js-btn');
+// let colors = ['blue', 'red', 'green', 'pink'];
+// let count = 0;
+// const primaryClass = btn4.className;
+// btn4.addEventListener('click', function(e) {
+//     this.className = primaryClass + " " + colors[count % colors.length];
+//     count++;
 // });
+
+document.querySelector('#ex4 .js-btn').addEventListener('click', function(e) {
+    if (this.classList.contains('blue')) {
+        this.classList.remove('blue');
+        this.classList.add('red');
+    }
+    else if (this.classList.contains('red')) {
+        this.classList.remove('red');
+        this.classList.add('green');
+    }
+    else {
+        this.classList.remove('green');
+        this.classList.add('blue');
+    }
+});
 
 /* ------------------------------------ */
 /* --- Exercice 5 --- */
