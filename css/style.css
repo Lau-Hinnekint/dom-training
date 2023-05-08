@@ -15,6 +15,31 @@
     background-color: lightpink;
 }
 
-.active {
-    background-color: var(--bg-sandbox);
+
+
+
+.tabs-link.active {
+    background-color: #fff;
+}
+
+.tab-content-item {
+    display: none;
+}
+
+.tab-content-item.active {
+    display: block;
+}
+
+
+
+.flex-list {
+    font-size : 1rem;
+}
+
+.flex-list-li {
+    font-size : 1rem;
+}
+
+.flex-list-btn {
+    font-size : 1rem;
 }

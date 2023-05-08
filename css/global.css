@@ -363,10 +363,6 @@ body.dark-template {
     color: var(--black);
     word-break: break-word;
 }
-.tabs-link .active {
-    background-color: var(--bg-sandbox);
-}
-
 
 .tab-content {
     background-color: var(--white);
